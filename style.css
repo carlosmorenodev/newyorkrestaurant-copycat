@@ -244,11 +244,7 @@ header {
 @media (max-width: 1200px) {
     .main-title {
         font-size: 40px;
-    }
-
-    .main-image {
-        width: 50px;
-    }
+    }    
 
     .reserves {
         flex-direction: column;
@@ -258,6 +254,10 @@ header {
         width: 100%;
         align-items: center;
         justify-content: center;
+    }
+
+    .main-img {
+        width: 100px;
     }
 
 }
@@ -286,5 +286,8 @@ header {
     .main-menu-active {
         opacity: 1;
     }
+
+    
+    
 
 }
