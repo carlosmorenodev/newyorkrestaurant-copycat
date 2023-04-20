@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #384c49;
+    
+}
+
+.container {
+   
+    /* margin: 5px; */
+    z-index:3;
+    position: relative;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    /* top:0; */
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.header-logo {
+    width: 150px;
+}
+
+.main-menu a {
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #43605C;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.main-menu a:hover {
+    color:rgb(185, 182, 182);
+}
+
+.responsive-nav {
+    display: none;
+}
+
+.responsive-nav i {
+    font-size: 30px;
+}
+
+/* Main */
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    padding: 200px 20px 20px 20px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),  url('img/IMG_9712.jpg');
+
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+.main-title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 130px;
+    width: 75%;
+}
+
+.main-img {
+    width: 200px;
+}
+
+/* Reserves */
+
+.reserves {
+    background-color: white;
+    padding: 50px;
+    color: #384c49;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.reserves article {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.reserves-icon p {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+
+.reserves-icon i {
+    font-size: 60px
+}
+
+.hours h3 {
+    text-transform: uppercase;
+}
+
+.hours ul {
+    list-style: none;
+}
+
+.hours li {
+    text-transform: uppercase;
+    padding: 5px;
+    font-weight: 400;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.book a {
+    text-decoration: none;
+    color: #384c49;
+}
+
+.book button {
+    background-color: #AD7264;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.book button:hover {
+    opacity: 0.9;
+}
+
+.reserves-img {
+    width: 50%;
+}
+
+.reserves-img img {
+    width: 100%;
+}
+
+/* Separate */
+
+.separate {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/IMG_9712.jpg');
+    height: 300px;
+    
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Contact */
+.contact {
+    background-color: white;
+    text-align: center;
+    color:#384c49;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-form input {
+    border: solid 1px #384c49;
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+.contact-form button {
+    width: 300px;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+    background-color: #43605C;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+}
+
+.contact-form hr {
+    width: 100%;
+}
+
+.adress {
+    width: 50%;
+    padding: 25px;    
+    border-top: 2px solid #43605C;
+}
+
+.adress a {
+    color:#43605C;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .main-title {
+        font-size: 40px;
+    }
+
+    .main-image {
+        width: 50px;
+    }
+
+    .reserves {
+        flex-direction: column;
+    }
+
+    .reserves-img {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .responsive-nav {
+        display: block;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        position:absolute;
+        top: 90px;
+        left:0;
+        width: 100%;
+        opacity: 0;
+        transition: 0.4s;
+    }
+
+    .main-menu-active {
+        opacity: 1;
+    }
+
+}
